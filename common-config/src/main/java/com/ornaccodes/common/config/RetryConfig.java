@@ -9,14 +9,15 @@ import org.springframework.retry.support.RetryTemplate;
 
 @Configuration
 public class RetryConfig {
-    private final RetryConfigData retryConfigData;
+
+    private RetryConfigData retryConfigData;
 
     public RetryConfig(RetryConfigData configData) {
         this.retryConfigData = configData;
     }
 
     @Bean
-    public RetryTemplate retryTemplate(){
+    public RetryTemplate retryTemplate() {
         RetryTemplate retryTemplate = new RetryTemplate();
 
         ExponentialBackOffPolicy exponentialBackOffPolicy = new ExponentialBackOffPolicy();
@@ -34,3 +35,6 @@ public class RetryConfig {
         return retryTemplate;
     }
 }
+
+
+

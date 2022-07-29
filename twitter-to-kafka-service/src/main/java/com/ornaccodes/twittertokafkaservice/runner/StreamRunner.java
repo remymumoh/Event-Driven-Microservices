@@ -1,2 +1,7 @@
-package com.ornaccodes.twittertokafkaservice.runner;public interface StreamRunner {
+package com.ornaccodes.twittertokafkaservice.runner;
+
+import twitter4j.TwitterException;
+
+public interface StreamRunner {
+    void start() throws TwitterException;
 }

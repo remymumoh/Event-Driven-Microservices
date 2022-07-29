@@ -1,7 +1,8 @@
-package com.ornaccodes.twittertokafkaservice.config;
+package com.ornaccodes.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
@@ -11,8 +12,9 @@ import java.util.List;
 @ConfigurationProperties(prefix = "twitter-to-kafka-service")
 public class TwitterToKafkaServiceConfigData {
     private List<String> twitterKeywords;
-    private List<String> welcomeKeywords;
-    private String twitterV2BaseUrl;
-    private String twitterV2RulesBaseUrl;
-    private String twitterV2BearerToken;
+    private String welcomeMessage;
+    private Boolean enableMockTweets;
+    private Long mockSleepMs;
+    private Integer mockMinTweetLength;
+    private Integer mockMaxTweetLength;
 }

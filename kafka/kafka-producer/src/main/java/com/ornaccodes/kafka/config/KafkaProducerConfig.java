@@ -15,18 +15,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-public class KafkaProfucerConfig <K extends Serializable, V extends SpecificRecordBase> {
+public class KafkaProducerConfig<K extends Serializable, V extends SpecificRecordBase> {
     private final KafkaConfigData kafkaConfigData;
+
     private final KafkaProducerConfigData kafkaProducerConfigData;
 
-
-    public KafkaProfucerConfig(KafkaConfigData configData, KafkaProducerConfigData producerConfigData) {
+    public KafkaProducerConfig(KafkaConfigData configData, KafkaProducerConfigData producerConfigData) {
         this.kafkaConfigData = configData;
         this.kafkaProducerConfigData = producerConfigData;
     }
 
     @Bean
-    public Map<String, Object> producerConfig(){
+    public Map<String, Object> producerConfig() {
         Map<String, Object> props = new HashMap<>();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaConfigData.getBootstrapServers());
         props.put(kafkaConfigData.getSchemaRegistryUrlKey(), kafkaConfigData.getSchemaRegistryUrl());
@@ -43,12 +43,12 @@ public class KafkaProfucerConfig <K extends Serializable, V extends SpecificReco
     }
 
     @Bean
-    public ProducerFactory<K, V> producerFactory(){
+    public ProducerFactory<K, V> producerFactory() {
         return new DefaultKafkaProducerFactory<>(producerConfig());
     }
 
     @Bean
-    public KafkaTemplate<K, V> kafkaTemplate(){
+    public KafkaTemplate<K, V> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
 }
