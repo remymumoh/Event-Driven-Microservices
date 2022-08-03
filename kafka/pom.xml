@@ -10,5 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>kafka</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>kafka-admin</module>
+        <module>kafka-producer</module>
+        <module>kafka-model</module>
+    </modules>
 
 </project>

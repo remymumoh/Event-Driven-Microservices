@@ -2,8 +2,8 @@ package com.ornaccodes.twittertokafkaservice.listener;
 
 import com.ornaccodes.config.KafkaConfigData;
 import com.ornaccodes.kafka.avro.model.TwitterAvroModel;
+import com.ornaccodes.kafka.config.service.KafkaProducer;
 import com.ornaccodes.twittertokafkaservice.transformer.TwitterStatusToAvroTransformer;
-import org.apache.kafka.clients.producer.KafkaProducer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
