@@ -16,7 +16,7 @@ twitter-to-kafka-service:
   mock-sleep-ms: 10000
   twitter-v2-base-url: https://api.twitter.com/2/tweets/search/stream?tweet.fields=created_at&expansions=author_id
   twitter-v2-rules-base-url: https://api.twitter.com/2/tweets/search/stream/rules
-  twitter-v2-bearer-token: AAAAAAAAAAAAAAAAAAAAAJkKfQEAAAAA7gtUeEOa5UWirmz0xpmvKIBPJow%3D2C1M3JeWyQIg6BRIqmhg85dhEqrh1ObKjVjQwwp7CfczTYKDdT
+  twitter-v2-bearer-token: AAAAAAAAAAAAAAAAAAAAAIAJfQEAAAAAKed4Nu0YcPzcXG9QHWmy0vlIY74%3DuDpLW9Q91DbFOgISq85YKHap9SD2mb4xAUeAdczFqDWJlwDYMC
 
 retry-config:
   initial-interval-ms: 1000
