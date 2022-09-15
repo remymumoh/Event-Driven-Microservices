@@ -23,3 +23,4 @@ start Config server. Then docker-compose -f common.yml -f kafka_cluster.yml up
 git config user.name "personal"
 git config user.name "work"
 git config user.name -- check current active profile
+add export JASYPT_ENCRYPTION_PASSWORD='Demo_Pwd!2020' to environment variables

@@ -14,5 +14,6 @@ spring:
     security:
       user:
         name: spring_cloud_user
-        password: springCloud_Pwd!
+        password: ENC(sA73ZhdL5cKjItiyqvAGnpF//QWtzsi1pW4z9ES0iElb4tzDXemywBOlWyHbSEdJy7jJi66Suf5B/YNlmuSQPw==)
+
 
