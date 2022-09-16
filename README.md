@@ -23,3 +23,8 @@ start Config server. Then docker-compose -f common.yml -f kafka_cluster.yml up
 git config user.name "personal"
 git config user.name "work"
 git config user.name -- check current active profile
+
+## encrypting service for jce
+ls ~/.sdkman/candidates
+cd ~/.sdkman/candidates/springboot
+spring encrypt springCloud_Pwd! --key 'Demo_Pwd!2020' -- pass the password
