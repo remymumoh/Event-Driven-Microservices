@@ -245,3 +245,40 @@ Action:
 
 If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
 
+2022-09-16 15:17:12 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2022-09-16 15:17:13 [main] INFO  c.o.config.server.ConfigServer - Starting ConfigServer v0.0.1-SNAPSHOT using Java 11.0.16.1 on e6ac51e1999b with PID 1 (/workspace/BOOT-INF/classes started by cnb in /workspace)
+2022-09-16 15:17:13 [main] INFO  c.o.config.server.ConfigServer - No active profile set, falling back to default profiles: default
+2022-09-16 15:17:32 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=1c7df4a5-d083-3c27-82fd-64180fd3386d
+2022-09-16 15:17:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2022-09-16 15:17:44 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2022-09-16 15:17:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-09-16 15:17:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-09-16 15:17:45 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-09-16 15:17:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 29825 ms
+2022-09-16 15:18:01 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ad51f60f-cb2f-4f5e-9413-56d04bc15c22
+
+2022-09-16 15:18:03 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/**'] with []
+2022-09-16 15:18:03 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/encrypt/**'] with []
+2022-09-16 15:18:03 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/decrypt/**'] with []
+2022-09-16 15:18:04 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38732364, org.springframework.security.web.context.SecurityContextPersistenceFilter@19fec3d6, org.springframework.security.web.header.HeaderWriterFilter@41e9f86, org.springframework.security.web.csrf.CsrfFilter@482c351d, org.springframework.security.web.authentication.logout.LogoutFilter@24a0c58b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3fde2209, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2aa14ae6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7c70aae1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@35025a0a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b768a65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74b00247, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48cd319d, org.springframework.security.web.session.SessionManagementFilter@233f52f8, org.springframework.security.web.access.ExceptionTranslationFilter@560271a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2871ac91]
+2022-09-16 15:18:11 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: You need to configure a uri for the git repository.
+2022-09-16 15:18:12 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2022-09-16 15:18:13 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-16 15:18:14 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid config server configuration.
+
+Action:
+
+If you are using the git profile, you need to set a Git URI in your configuration.  If you have set spring.cloud.config.server.bootstrap=true, you need to use a composite configuration.
+
