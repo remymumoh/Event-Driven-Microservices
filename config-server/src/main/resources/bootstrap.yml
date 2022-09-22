@@ -6,13 +6,12 @@ spring:
       server:
         git:
           uri: https://github.com/remymumoh/spring-cloud-config-server-repository
-          username: remymumoh
-          password: '{cipher}f970ddc66a1712a45bd24d61b9ea596abfd28e36b90947939e4f6a1f9e8998cafb9287a0999600477449ee8871990b1e67b9eb0f5f097b4b3850028e66baaebc'
-          clone-on-start: true
           default-label: main
-      fail-fast: true
-    security:
-      user:
-        name: spring_cloud_user
-        password: '{cipher}fdc367aec48ee60eae9c25a56c25a46582cc96c3a8db10686f710d636f81fd52dc043f2cd5258f1755b56868072fad31'
-
+          username: remymumoh
+          password: '{cipher}c7bdbad8ca44c1a2c65f430fcef0f0414266a58c8642497487459547eab3338097436e74113274c419442e92da9f1436b0096870feb620ca5eb11ffc347e50d7'
+          clone-on-start: true
+    fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: '{cipher}fdc367aec48ee60eae9c25a56c25a46582cc96c3a8db10686f710d636f81fd52dc043f2cd5258f1755b56868072fad31'
