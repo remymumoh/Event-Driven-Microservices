@@ -28,3 +28,9 @@ git config user.name -- check current active profile
 ls ~/.sdkman/candidates
 cd ~/.sdkman/candidates/springboot
 spring encrypt springCloud_Pwd! --key 'Demo_Pwd!2020' -- pass the password
+
+## connect to a contoainer shell
+docker exec -it CONTAINER_ID /bin/bash
+
+docker exec -it 55872071534d /bin/bash
+55872071534d

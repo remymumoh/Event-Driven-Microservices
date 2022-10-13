@@ -8,6 +8,7 @@
         <module>kafka</module>
         <module>common-config</module>
         <module>config-server</module>
+        <module>kafka-to-elastic-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -84,7 +85,11 @@
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc-openapi-ui.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.ornaccodes</groupId>
+                <artifactId>kafka-consumer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-circuitbreaker-reactor-resilience4j</artifactId>

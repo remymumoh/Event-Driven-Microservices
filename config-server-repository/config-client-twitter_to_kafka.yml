@@ -1,3 +1,6 @@
+server:
+  port: 8181
+
 twitter-to-kafka-service:
   twitter-keywords:
     - Java
@@ -6,7 +9,7 @@ twitter-to-kafka-service:
     - Elasticsearch
   welcome-message: Hello microservices!
   enable-v2-tweets: true
-  enable-mock-tweets: true
+  enable-mock-tweets: false
   mock-min-tweet-length: 5
   mock-max-tweet-length: 15
   mock-sleep-ms: 10000
