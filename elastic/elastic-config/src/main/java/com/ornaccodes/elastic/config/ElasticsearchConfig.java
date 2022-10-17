@@ -16,7 +16,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.Objects;
 
 @Configuration
-@EnableElasticsearchRepositories()
+@EnableElasticsearchRepositories(basePackages = "com.ornaccodes.elastic.index.client.repository")
 public class ElasticsearchConfig extends AbstractElasticsearchConfiguration {
 
     private final ElasticConfigData elasticConfigData;
@@ -37,9 +37,8 @@ public class ElasticsearchConfig extends AbstractElasticsearchConfiguration {
                 )).setRequestConfigCallback(
                         requestConfigBuilder ->
                                 requestConfigBuilder
-                                        .setConnectTimeout(elasticConfigData.getConnectTimeoutsMs())
+                                        .setConnectTimeout(elasticConfigData.getConnectTimeoutMs())
                                         .setSocketTimeout(elasticConfigData.getSocketTimeoutMs())
-
                 )
         );
     }
