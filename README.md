@@ -34,3 +34,12 @@ docker exec -it CONTAINER_ID /bin/bash
 
 docker exec -it 55872071534d /bin/bash
 55872071534d
+
+## config server not yet up fix
+run docker-compose up then  localhost:8888/config-client/twitter_to_kafka on browser and login using username: spring_cloud_user password: springcloud_Pwd!
+
+## check if localhost:8888 is healthy
+curl http://localhost:8888/actuator/health
+
+## Elastic search to docker-cmpose folder and run
+docker-compose -f common.yml -f elastic_cluster.yml up

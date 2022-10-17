@@ -6,9 +6,14 @@
         <module>twitter-to-kafka-service</module>
         <module>app-config-data</module>
         <module>kafka</module>
+        <module>kafka/kafka-admin</module>
+        <module>kafka/kafka-producer</module>
+        <module>kafka/kafka-model</module>
+        <module>kafka/kafka-consumer</module>
         <module>common-config</module>
         <module>config-server</module>
         <module>kafka-to-elastic-service</module>
+        <module>elastic</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,7 +26,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>eventdrivenmicroservices</name>
     <description>eventdrivenmicroservices</description>
-
     <packaging>pom</packaging>
 
     <properties>
@@ -42,6 +46,8 @@
         <spring-retry.version>1.3.1</spring-retry.version>
         <springdoc-openapi-ui.version>1.6.11</springdoc-openapi-ui.version>
         <spring-cloud-starter-zipkin.version>2.2.8.RELEASE</spring-cloud-starter-zipkin.version>
+        <logstash-logback-encoder.version>7.2</logstash-logback-encoder.version>
+        <elastic.version>7.9.1</elastic.version>
         <spring-cloud-circuitbreaker-reactor-resilience4j.version>2.0.1</spring-cloud-circuitbreaker-reactor-resilience4j.version>
     </properties>
     <repositories>
@@ -54,7 +60,7 @@
         <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
-            <version>7.2</version>
+            <version>${logstash-logback-encoder.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -65,6 +71,26 @@
     <dependencyManagement>
         <dependencies>
             <!--LOCAL -->
+            <dependency>
+                <groupId>com.ornaccodes</groupId>
+                <artifactId>elastic-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ornaccodes</groupId>
+                <artifactId>elastic-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ornaccodes</groupId>
+                <artifactId>elastic-index-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ornaccodes</groupId>
+                <artifactId>elastic-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.ornaccodes</groupId>
                 <artifactId>app-config-data</artifactId>
@@ -84,6 +110,11 @@
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>${springdoc-openapi-ui.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+                <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.ornaccodes</groupId>
@@ -213,6 +244,18 @@
                 <groupId>org.apache.avro</groupId>
                 <artifactId>avro</artifactId>
                 <version>${avro.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elastic.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elastic-search-rest-high-level-client</artifactId>
+                <version>${elastic.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.confluent</groupId>
