@@ -1,7 +1,6 @@
 package com.ornaccodes.kafka.to.elastic.service.consumer.impl;
 
 import com.ornaccodes.config.KafkaConfigData;
-import com.ornaccodes.config.KafkaConsumerConfigData;
 import com.ornaccodes.elastic.index.client.service.ElasticIndexClient;
 import com.ornaccodes.elastic.model.index.impl.TwitterIndexModel;
 import com.ornaccodes.kafka.admin.client.KafkaAdminClient;
