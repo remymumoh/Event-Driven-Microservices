@@ -48,6 +48,7 @@
         <spring-cloud-starter-zipkin.version>2.2.8.RELEASE</spring-cloud-starter-zipkin.version>
         <logstash-logback-encoder.version>7.2</logstash-logback-encoder.version>
         <elastic.version>7.9.1</elastic.version>
+        <snappy.version>1.1.8.4</snappy.version>
         <spring-cloud-circuitbreaker-reactor-resilience4j.version>2.0.1</spring-cloud-circuitbreaker-reactor-resilience4j.version>
     </properties>
     <repositories>
@@ -61,6 +62,17 @@
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
             <version>${logstash-logback-encoder.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-resolver-dns-native-macos</artifactId>
+            <version>${netty.version}</version>
+            <classifier>osx-aarch_64</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>${snappy.version}</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -146,12 +158,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-webflux</artifactId>
                 <version>${spring-boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-resolver-dns-native-macos</artifactId>
-                <version>${netty.version}</version>
-                <classifier>osx-aarch_64</classifier>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
