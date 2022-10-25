@@ -14,6 +14,8 @@
         <module>config-server</module>
         <module>kafka-to-elastic-service</module>
         <module>elastic</module>
+        <module>common-util</module>
+        <module>elastic-query-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -49,6 +51,7 @@
         <logstash-logback-encoder.version>7.2</logstash-logback-encoder.version>
         <elastic.version>7.9.1</elastic.version>
         <snappy.version>1.1.8.4</snappy.version>
+        <javax.version>2.0.1.Final</javax.version>
         <spring-cloud-circuitbreaker-reactor-resilience4j.version>2.0.1</spring-cloud-circuitbreaker-reactor-resilience4j.version>
     </properties>
     <repositories>
@@ -80,8 +83,28 @@
             <!--LOCAL -->
             <dependency>
                 <groupId>com.ornaccodes</groupId>
+                <artifactId>common-util</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ornaccodes</groupId>
                 <artifactId>elastic-model</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ornaccodes</groupId>
+                <artifactId>elastic-query-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${javax.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-hateoas</artifactId>
+                <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.ornaccodes</groupId>
