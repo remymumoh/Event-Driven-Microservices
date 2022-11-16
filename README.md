@@ -29,7 +29,7 @@ ls ~/.sdkman/candidates
 cd ~/.sdkman/candidates/springboot
 spring encrypt springCloud_Pwd! --key 'Demo_Pwd!2020' -- pass the password
 
-## connect to a contoainer shell
+## connect to a container shell
 docker exec -it CONTAINER_ID /bin/bash
 
 docker exec -it 55872071534d /bin/bash
@@ -41,5 +41,5 @@ run docker-compose up then  localhost:8888/config-client/twitter_to_kafka on bro
 ## check if localhost:8888 is healthy
 curl http://localhost:8888/actuator/health
 
-## Elastic search to docker-cmpose folder and run
+## Elastic search to docker-compose folder and run
 docker-compose -f common.yml -f elastic_cluster.yml up

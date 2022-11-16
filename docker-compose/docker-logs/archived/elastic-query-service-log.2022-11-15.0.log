@@ -1,0 +1,6 @@
+2022-11-15 20:20:42 [main] INFO  c.o.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication v0.0.1-SNAPSHOT using Java 11.0.17 on eef68818eb91 with PID 1201 (/workspace/BOOT-INF/classes started by root in /workspace)
+2022-11-15 20:20:42 [main] INFO  c.o.e.q.s.ElasticQueryServiceApplication - The following profiles are active: elastic_query
+2022-11-15 20:20:43 [main] INFO  o.s.b.c.config.ConfigDataLoader - Fetching config from server at : http://config-server:8888
+2022-11-15 20:20:43 [main] INFO  o.s.b.c.config.ConfigDataLoader - Located environment: name=elastic-query-service,config-client, profiles=[elastic_query], label=null, version=cacdc1942ed810fc8beb9aa5e79e5854a1493198, state=null
+2022-11-15 20:20:54 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2022-11-15 20:20:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 534 ms. Found 1 Elasticsearch repository interfaces.
